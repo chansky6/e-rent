@@ -8,7 +8,7 @@ A JavaWeb project which creates a system of renting houses.
 
 ### 主页面
 
-![image-20221119232225724](https://bbchen-pictures.oss-cn-hangzhou.aliyuncs.com/img/202211192322820.png)
+![image-20221119232746244](https://bbchen-pictures.oss-cn-hangzhou.aliyuncs.com/img/202211192327382.png)
 
 ### 我的租房
 
