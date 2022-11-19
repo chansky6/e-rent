@@ -95,7 +95,7 @@ public class HouseServlet extends BaseServlet {
         response.getWriter().write("success");
     }
 
-    public void chengeHouseStatus(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, ParseException {
+    public void changeHouseStatus(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, ParseException {
         //通过get请求获取参数
         String _id = request.getParameter("id");
         String _status = request.getParameter("status");
@@ -104,7 +104,7 @@ public class HouseServlet extends BaseServlet {
         int id = Integer.parseInt(_id);
         int status = Integer.parseInt(_status);
 
-        houseService.chengeHouseStatus(id,status);
+        houseService.changeHouseStatus(id,status);
 
         response.getWriter().write("success");
     }

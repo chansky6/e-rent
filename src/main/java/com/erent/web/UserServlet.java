@@ -53,6 +53,7 @@ public class UserServlet extends BaseServlet{
     }
 
     public void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        // 1. 获取用户名和密码
         String username = new String(request.getParameter("username").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
         String password = request.getParameter("password");
 

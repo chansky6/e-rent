@@ -18,12 +18,15 @@ public class BaseServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 1.获取请求路径
-        String uri = req.getRequestURI();   // /brand-case/brand/selectAll
+        // /brand-case/brand/selectAll
+        String uri = req.getRequestURI();
 
         // 2.获取最后一段路径
         int index = uri.lastIndexOf('/');
-//        String methodName = uri.substring(index);   // /selectAll
-        String methodName = uri.substring(index + 1);   // selectAll
+        // /selectAll
+//        String methodName = uri.substring(index);
+        // selectAll
+        String methodName = uri.substring(index + 1);
 //        System.out.println(methodName);
 
         // 3.执行方法

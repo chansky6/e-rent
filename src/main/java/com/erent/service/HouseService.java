@@ -47,7 +47,7 @@ public interface HouseService {
      * @param id
      * @param status
      */
-    void chengeHouseStatus(int id, int status);
+    void changeHouseStatus(int id, int status);
 
     /**
      * 根据房东ID查询房屋状态

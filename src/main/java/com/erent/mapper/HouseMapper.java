@@ -65,7 +65,7 @@ public interface HouseMapper {
      * @param status
      */
     @Update("update tb_house set status = #{status} where id = #{id};")
-    void chengeHouseStatus(@Param("id") int id,
+    void changeHouseStatus(@Param("id") int id,
                            @Param("status") int status);
 
     /**

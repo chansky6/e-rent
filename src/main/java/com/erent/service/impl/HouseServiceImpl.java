@@ -90,11 +90,11 @@ public class HouseServiceImpl implements HouseService {
     }
 
     @Override
-    public void chengeHouseStatus(int id, int status) {
+    public void changeHouseStatus(int id, int status) {
         SqlSession sqlSession = factory.openSession();
         HouseMapper mapper = sqlSession.getMapper(HouseMapper.class);
 
-        mapper.chengeHouseStatus(id,status);
+        mapper.changeHouseStatus(id,status);
         sqlSession.commit();
 
         sqlSession.close();

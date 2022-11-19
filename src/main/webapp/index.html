@@ -661,7 +661,7 @@
                         url: "http://localhost:8080/e-rent/request/rejectReq?id=" + row.id,
                     }).then(resp => {
                         if (resp.data === "success") {
-                            this.chengeHouseStatus(row.houseId,0);
+                            this.changeHouseStatus(row.houseId,0);
                             this.selectByPAC();
                             // 删除成功
                             this.hrefToMsg();
@@ -723,7 +723,7 @@
                         url: "http://localhost:8080/e-rent/request/cancelReq?id=" + row.id,
                     }).then(resp => {
                         if (resp.data === "success") {
-                            this.chengeHouseStatus(row.houseId,0);
+                            this.changeHouseStatus(row.houseId,0);
                             // 删除成功
                             this.hrefToMsg();
                             this.selectByPAC();
@@ -743,10 +743,10 @@
                 });
             },
 
-            chengeHouseStatus(houseId,status) {
+            changeHouseStatus(houseId,status) {
                 axios({
                     method:"get",
-                    url:"http://localhost:8080/e-rent/house/chengeHouseStatus?id="
+                    url:"http://localhost:8080/e-rent/house/changeHouseStatus?id="
                         + houseId
                         +"&status="
                         + status
@@ -763,7 +763,7 @@
                     data: this.req,
                 }).then(resp => {
                     if (resp.data === 'success') {
-                        this.chengeHouseStatus(this.req.houseId,2);
+                        this.changeHouseStatus(this.req.houseId,2);
                         this.selectByPAC();
                         // 成功弹窗
                         this.$message({
@@ -1131,7 +1131,7 @@
                             + this.user.id,
                     }).then(resp => {
                         if (resp.data === "success") {
-                            this.chengeHouseStatus(row.houseId,1);
+                            this.changeHouseStatus(row.houseId,1);
                             this.hrefToMsg();
                             this.selectByPAC();
                             // 成功弹窗
@@ -1171,7 +1171,7 @@
                         url: "http://localhost:8080/e-rent/house/checkOut?houseId=" + row.id,
                     }).then(resp => {
                         if (resp.data === "success") {
-                            this.chengeHouseStatus(row.id,0);
+                            this.changeHouseStatus(row.id,0);
                             this.hrefToHouse();
                             this.selectByPAC();
                             // 成功弹窗
