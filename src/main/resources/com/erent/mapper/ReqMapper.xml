@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.erent.mapper.ReqMapper">
+
+    <resultMap id="requestResultMap" type="request">
+        <result property="houseId" column="house_id"/>
+        <result property="reqId" column="req_id"/>
+        <result property="ownerId" column="owner_id"/>
+        <result property="reqTime" column="req_time"/>
+    </resultMap>
+    <insert id="addReq">
+        insert into tb_req values (null,#{request.houseId},#{request.reqId},#{request.ownerId},0,#{request.appointment},#{request.reqTime});
+        update tb_house set status = 2 where id = #{request.houseId};
+    </insert>
+    <update id="isRent">
+        update tb_req set current = 3 where id = #{reqId};
+        update tb_house set renter_id = #{renterId} where id = #{houseId};
+    </update>
+
+</mapper>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<div id="app">
+    <el-button type="warning" @click="" icon="el-icon-refresh-right" size="mini" round></el-button>
+</div>
+</body>
+
+
+<!--Vue 引入-->
+<script src="js/vue.js"></script>
+<!--Axios 引入-->
+<script src="js/axios-0.18.0.js"></script>
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+<script>
+    new Vue({
+        el: "#app",
+        method:{
+
+        },
+        data() {
+            return {
+                userInfoDialogVisible: true
+            }
+        }
+    })
+</script>
+</html>
